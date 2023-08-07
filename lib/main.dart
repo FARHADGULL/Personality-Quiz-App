@@ -7,7 +7,6 @@ void main() {
 class MyApp extends StatefulWidget {
   State<StatefulWidget> createState() => MyAppState();
 }
-
 class MyAppState extends State<MyApp> {
   var questionIndex = 0; //var is a generic type and dart can infer the type of the variable
   void answerQuestion() {
