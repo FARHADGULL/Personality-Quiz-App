@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './questions.dart'; //importing the file questions.dart
 
 void main() {
   runApp( MyApp());
@@ -29,7 +30,7 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: <Widget>[
-            Text(questions[_questionIndex]), //Text widget 
+            Question(questions[_questionIndex]), //Text widget 
             ElevatedButton(onPressed: _answerQuestion, child: Text('Answer 1'),), //called without parantheses because we don't want to execute it right away when flutter builds and render the widgets but rather when the button is pressed and called function using pointer and its a named function
             ElevatedButton(onPressed: () => print('Answer 2 Chosen!'), child: Text('Answer 2'),), //anonymous function using lambda expression and called using pointer
             ElevatedButton(onPressed: _answerQuestion, child: Text('Answer 3'),),
