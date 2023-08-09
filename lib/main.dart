@@ -40,7 +40,7 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: Text('My First App'),
         ),
-        body: Column(
+        body: _questionIndex < questions.length ? Column(
           children: <Widget>[
             Question(questions[_questionIndex]['questionText'] as String), //Text widget 
             ...(questions[_questionIndex]['answers'] as List<String>).map((answer) {
@@ -50,8 +50,8 @@ class _MyAppState extends State<MyApp> {
             //ElevatedButton(onPressed: () => print('Answer 2 Chosen!'), child: Text('Answer 2'),), //anonymous function using lambda expression and called using pointer
             //ElevatedButton(onPressed: _answerQuestion, child: Text('Answer 3'),),
             ],
-        ),
-      ),
+        ) : const Center(child: Text('You did it!'))),
+      
     );
   }
 }
