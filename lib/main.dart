@@ -10,17 +10,7 @@ class MyApp extends StatefulWidget {
   State<StatefulWidget> createState() => _MyAppState();
 }
 class _MyAppState extends State<MyApp> {
-  var _questionIndex = 0; //var is a generic type and dart can infer the type of the variable
-  void _answerQuestion() {
-    setState(() {
-      _questionIndex = _questionIndex + 1;
-    });
-    print(_questionIndex);
-  }
-
-  @override
-  Widget build(BuildContext context){
-    const questions = [
+  final questions = const [
       {
         'questionText': 'What\'s your favourite color?',
         'answers': ['Black', 'Red', 'Green', 'White'],
@@ -34,6 +24,17 @@ class _MyAppState extends State<MyApp> {
         'answers': ['Muhammad', 'Ali', 'Ahmad', 'Hamid'],
       }
     ];
+  var _questionIndex = 0; //var is a generic type and dart can infer the type of the variable
+  void _answerQuestion() {
+    setState(() {
+      _questionIndex = _questionIndex + 1;
+    });
+    print(_questionIndex);
+  }
+
+  @override
+  Widget build(BuildContext context){
+    
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
