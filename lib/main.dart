@@ -24,7 +24,7 @@ class _MyAppState extends State<MyApp> {
         'answers': [{'text': 'Muhammad', 'score': 10}, {'text': 'Ali', 'score': 9}, {'text': 'Ahmad', 'score': 8}, {'text': 'Hamid', 'score': 8}],
       }
     ];
-  var _questionIndex = 0; //var is a generic type and dart can infer the type of the variable
+  var _questionIndex = 0;
   var _totalScore = 0;
   void _answerQuestion(int score) {
     _totalScore = _totalScore + score;
@@ -41,7 +41,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('My First App'),
+          title: const Text('My First App'),
         ),
         body: _questionIndex < _questions.length ? Quiz(answerQuestion: _answerQuestion, questionIndex: _questionIndex, questions: _questions,) : const Result(),
       ),
