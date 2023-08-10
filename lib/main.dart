@@ -13,15 +13,15 @@ class _MyAppState extends State<MyApp> {
   final _questions = const [
       {
         'questionText': 'What\'s your favourite color?',
-        'answers': ['Black', 'Red', 'Green', 'White'],
+        'answers': [{'text': 'Black', 'score': 10}, {'text':'Red', 'score': 5}, {'text':'Green', 'score': 8}, {'text':'white', 'score': 9}],
       },
       {
         'questionText': 'What\'s your favourite animal?',
-        'answers': ['Rabbit', 'Snake', 'Elephant', 'Lion'],
+        'answers': [{'text': 'Rabbit', 'score': 8}, {'text': 'Snake', 'score': 7}, {'text': 'Elephent', 'score': 8}, {'text': 'Lion', 'score': 10}],
       },
       {
         'questionText': 'Who\'s your favourite instructor?',
-        'answers': ['Muhammad', 'Ali', 'Ahmad', 'Hamid'],
+        'answers': [{'text': 'Muhammad', 'score': 10}, {'text': 'Ali', 'score': 9}, {'text': 'Ahmad', 'score': 8}, {'text': 'Hamid', 'score': 8}],
       }
     ];
   var _questionIndex = 0; //var is a generic type and dart can infer the type of the variable
