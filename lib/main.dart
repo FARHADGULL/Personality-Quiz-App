@@ -25,8 +25,11 @@ class _MyAppState extends State<MyApp> {
       }
     ];
   var _questionIndex = 0; //var is a generic type and dart can infer the type of the variable
-  void _answerQuestion() {
+  var _totalScore = 0;
+  void _answerQuestion(int score) {
+    _totalScore = _totalScore + score;
     setState(() {
+      
       _questionIndex = _questionIndex + 1;
     });
     print(_questionIndex);
