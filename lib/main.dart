@@ -41,7 +41,9 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('Personality Quiz'),
         ),
-        body: _questionIndex < _questions.length ? Quiz(answerQuestion: _answerQuestion, questionIndex: _questionIndex, questions: _questions,) : const Result(),
+        body: _questionIndex < _questions.length
+        ? Quiz(answerQuestion: _answerQuestion, questionIndex: _questionIndex, questions: _questions,)
+        : const Result(),
       ),
     );
   }
