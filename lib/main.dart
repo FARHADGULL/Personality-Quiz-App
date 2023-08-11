@@ -29,10 +29,8 @@ class _MyAppState extends State<MyApp> {
   void _answerQuestion(int score) {
     _totalScore = _totalScore + score;
     setState(() {
-      
       _questionIndex = _questionIndex + 1;
     });
-    print(_questionIndex);
   }
 
   @override
@@ -41,7 +39,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('My First App'),
+          title: const Text('Personality Quiz'),
         ),
         body: _questionIndex < _questions.length ? Quiz(answerQuestion: _answerQuestion, questionIndex: _questionIndex, questions: _questions,) : const Result(),
       ),
