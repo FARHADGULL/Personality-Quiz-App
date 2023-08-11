@@ -3,10 +3,13 @@ import 'package:personailty_quiz_app/quiz.dart';
 import 'package:personailty_quiz_app/result.dart';
 
 void main() {
-  runApp( MyApp());
+  runApp( const MyApp());
 }
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
   State<StatefulWidget> createState() => _MyAppState();
 }
 class _MyAppState extends State<MyApp> {
