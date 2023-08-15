@@ -6,6 +6,6 @@ class Result extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text('Yes, You did it!'));
+    return const Center(child: Text('Yes, You did it!', style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),));
   }
 }
