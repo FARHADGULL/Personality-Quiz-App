@@ -20,6 +20,23 @@ class Result extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text(resultPhrase, style: const TextStyle(fontSize: 36, fontWeight: FontWeight.bold), textAlign: TextAlign.center,));
+    return Center(
+      child: Column(
+        children: [
+          Text(
+            resultPhrase, 
+            style: const TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
+          ),
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text('Restart Quiz!'),
+            style: TextButton.styleFrom(
+              primary: Colors.blue,
+            ),
+          ),
+        ],
+      )
+    );
   }
 }
