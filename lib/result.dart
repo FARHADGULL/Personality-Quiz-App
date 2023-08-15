@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class Result extends StatelessWidget {
   final int resultScore;
-  const Result({super.key, required this.resultScore});
+  final Function resetHandler;
+  const Result({super.key, required this.resultScore, required this.resetHandler});
 
   String get resultPhrase {
     String resultText;
