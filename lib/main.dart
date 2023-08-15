@@ -46,7 +46,7 @@ class _MyAppState extends State<MyApp> {
         ),
         body: _questionIndex < _questions.length
         ? Quiz(answerQuestion: _answerQuestion, questionIndex: _questionIndex, questions: _questions,)
-        : const Result(),
+        : Result(resultScore: _totalScore),
       ),
     );
   }
