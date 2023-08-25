@@ -15,7 +15,7 @@ class Answer extends StatelessWidget {
           foregroundColor: MaterialStateProperty.all(Colors.white),
         ),
         onPressed: selectHandler,
-        child: const Text('Answer 1', style: TextStyle(color: Colors.white)),
+        child: Text(answerText, style: const TextStyle(color: Colors.white)),
       ),
     );
   }
